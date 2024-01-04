@@ -53,13 +53,16 @@ The corresponding series:
     & = -1 + \left(-\frac{1}{2}\right) + \left(-\frac{1}{6}\right) + \left(-\frac{1}{24}\right) + \ldots \\ 
 \end{align*}
 
-The general term of the series, 
-\[ f(n) = \frac{-1}{n!} \]
+The nth term of the series is , 
+\begin{align*}
+    x(n) & = \frac{-1}{n!} (u(n))
+\end{align*} 
 
-The Z-transform of \( f(n) \) is given by:
+The Z-transform of \( x(n) \) is given by:
 
 \begin{align*}
-    F(z) & = \sum_{n=1}^{\infty} f(n) \cdot z^{-n} \\
+    F(z) & = \sum_{n=-\infty}^{\infty} x(n) \cdot z^{-n} \\
+    & = \sum_{n=-\infty}^{\infty} \frac{-1}{n!}\cdot u(n) \cdot z^{-n} \\
     & = \sum_{n=1}^{\infty} \frac{-1}{n!} \cdot z^{-n} \\
     & = - (e^{z^{-1}} - 1) \\
     & = 1 - e^{z^{-1}}  
@@ -69,5 +72,4 @@ So, the Z-transform of the given series is \\
 \( 1 - e^{z^{-1}} \).
 
 \end{document}
-
 
