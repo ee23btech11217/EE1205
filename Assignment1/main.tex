@@ -1,4 +1,3 @@
-
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{txfonts}
@@ -24,51 +23,69 @@
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 
+
 \section*{Exercise 9.1}
 
-\noindent \textbf{12) \hspace{2pt}Write the first five terms of each of the sequences and obtain the corresponding series}
-$x(1) = -1$, $x(n) = \dfrac{x({n-1})}{n}$, $n \geq 2$\\
+\noindent \textbf{12) \hspace{2pt}Write the five terms at n = 1, 2, 3, 4, 5 of the sequence and obtain the corresponding series}
+
+$ x(n) = 
+\begin{cases}
+-1 & n = 1 \\
+\frac{x(n-1)}{n} & n \geq 2 \\
+ 0 & n \leq 0
+\end{cases}
+$
+\\
 
 \noindent Solution: 
 
-\noindent Given: $x(1) = -1$, $x(n) = \dfrac{x({n-1})}{n}$, $n \geq 2$. \\
-
-First five terms of the sequence:
-
+\noindent 
 \begin{align*}
 x(1) & = -1 \\
 x(2) & = \frac{x(1)}{2} = -\frac{1}{2} \\
-x(3) & = \frac{x(2)}{3} = -\frac{1}{2 \cdot 3} = -\frac{1}{6}\\
-x(4) & = \frac{x(3)}{4} = -\frac{1}{2 \cdot 3 \cdot 4} = -\frac{1}{24}\\
-x(5) & = \frac{x(4)}{5} = -\frac{1}{2 \cdot 3 \cdot 4 \cdot 5} = -\frac{1}{120}
+x(3) & = \frac{x(2)}{3} = -\frac{1}{2   3} = -\frac{1}{6}\\
+x(4) & = \frac{x(3)}{4} = -\frac{1}{2   3   4} = -\frac{1}{24}\\
+x(5) & = \frac{x(4)}{5} = -\frac{1}{2   3   4   5} = -\frac{1}{120}
 \end{align*} \\
 
-So the first five terms of the series are: 
-$$-1 , -\frac{1}{2}, -\frac{1}{6}, -\frac{1}{24},  -\frac{1}{120}$$ \\
+% So the first five terms of the series are: 
+% $$-1 , -\frac{1}{2}, -\frac{1}{6}, -\frac{1}{24},  -\frac{1}{120}$$ \\
 
 The corresponding series:
 \begin{align*}
-    \sum_{n=1}^{\infty} x(n) & = x(1) + x(2) + x(3) + x(4) + x(5) + \ldots \\
-    & = -1 + \left(-\frac{1}{2}\right) + \left(-\frac{1}{6}\right) + \left(-\frac{1}{24}\right) + \ldots \\ 
+    \sum_{n=-\infty}^{\infty} x(n) & = \ldots + 0 + x(1) + x(2) + x(3) + x(4) + \ldots \\
+    & = \ldots + 0 -1 + \left(-\frac{1}{2}\right) + \left(-\frac{1}{6}\right) + \left(-\frac{1}{24}\right) + \ldots \\ 
 \end{align*}
 
 The nth term of the series is, 
 \begin{align*}
     x(n) & = \frac{-1}{n!} (u(n))
-\end{align*} 
+\end{align*}  \\
 
 The Z-transform of $ x(n) $ is given by:
 $$x(n) \ztransform F(z)$$
 
 \begin{align*}
-    F(z) & = \sum_{n=-\infty}^{\infty} x(n) \cdot z^{-n} \\
-    & = \sum_{n=-\infty}^{\infty} \frac{-1}{n!}\cdot u(n) \cdot z^{-n} \\
-    & = \sum_{n=1}^{\infty} \frac{-1}{n!} \cdot z^{-n} \\
-    & = - (e^{z^{-1}} - 1) \\
+    F(z) & = \sum_{n=-\infty}^{\infty} x(n)   z^{-n} \\
+    & = \sum_{n=-\infty}^{\infty} \frac{-1}{n!}  u(n)   z^{-n} \\
+    & = \sum_{n=1}^{\infty} \frac{-1}{n!}   z^{-n} \\
+    & = - (e^{z^{-1}} - 1) \\       
     & = 1 - e^{z^{-1}}  
 \end{align*}
 
 So, the Z-transform of the given series is 
-$ 1 - e^{z^{-1}} $.
+$ 1 - e^{z^{-1}} $.\\
+
+
+For the series to converge, the ratio test must be satisfied for n $>$ 0
+\begin{align*}
+ \lim_{{n \to \infty}} \left| \frac{x(n+1) z^{-(n+1)}}{x(n) z^{-n}} \right| & <  1 \\
+\lim_{{n \to \infty}} \left| \frac{-z^{-n-1} n!}{-z^{-n} (n+1)!}\right| & < 1\\
+\lim_{{n \to \infty}} \left| \frac{z^{-1}}{n+1} \right| & < 1\\
+\end{align*}
+
+The condition is satisfied for $ \text{Re}(z) \neq 0 $ \\
+
+Hence, ROC of Z transform is $z \in \mathbb{C} : Re(z) \neq 0$.
 
 \end{document}
