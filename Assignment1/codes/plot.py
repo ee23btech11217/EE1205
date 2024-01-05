@@ -19,6 +19,7 @@ x_values = [x_n(n) for n in n_values]
 plt.stem(n_values, x_values, markerfmt='o', linefmt='b-', basefmt='r-')
 plt.title('Terms of the Sequence x(n)')
 plt.xlabel('n')
+plt.legend()
 plt.ylabel('x(n)')
 plt.grid(True)
 plt.show()
