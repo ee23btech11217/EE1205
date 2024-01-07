@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.2)  5 JAN 2024 09:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.2)  8 JAN 2024 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1144,10 +1144,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-<plot.png, id=29, 462.528pt x 346.896pt>
-File: plot.png Graphic file (type png)
-<use plot.png>
-Package pdftex.def Info: plot.png  used on input line 68.
+
+Overfull \hbox (4.35876pt too wide) detected at line 59
+[]
+ []
+
+<figs/plot.png, id=29, 462.528pt x 346.896pt>
+File: figs/plot.png Graphic file (type png)
+<use figs/plot.png>
+Package pdftex.def Info: figs/plot.png  used on input line 68.
 (pdftex.def)             Requested size: 258.0pt x 193.50879pt.
 
 Overfull \hbox (6.0pt too wide) in paragraph at lines 68--69
@@ -1155,45 +1160,51 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 68--69
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 101.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 101.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./plot.png>] (./main.aux) ) 
+ <./figs/plot.png>]
+(./main.aux) ) 
 Here is how much of TeX's memory you used:
- 22300 strings out of 483183
- 462783 string characters out of 5966293
- 700086 words of memory out of 5000000
- 36740 multiletter control sequences out of 15000+600000
- 703551 words of font info for 148 fonts, out of 8000000 for 9000
+ 22327 strings out of 483183
+ 463127 string characters out of 5966293
+ 699091 words of memory out of 5000000
+ 36761 multiletter control sequences out of 15000+600000
+ 713999 words of font info for 166 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
  76i,11n,91p,472b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/u
-sr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvi
-ps/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/sh
-are/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}</usr/share/texmf/fonts/type1/public/l
-m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-mi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t
-xsyc.pfb>
-Output written on main.pdf (1 page, 143613 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/te
+xmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy
+.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts
+/enc/dvips/lm/lm-rmsc.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
+6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txs
+ya.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb>
+Output written on main.pdf (1 page, 196750 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

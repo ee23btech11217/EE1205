@@ -2,7 +2,7 @@ import math
 import matplotlib.pyplot as plt
 
 def x_n(n):
-    if n <= 0:
+    if n < 0:
         return 0
     else:
         return (-1) / math.factorial(n)
@@ -12,7 +12,7 @@ print("//This program will plot the terms of the sequence up to x(n)// \n")
 N = int(input("Enter the value of n: "))
 
 # Generate the sequence up to N
-n_values = list(range(N+1))
+n_values = list(range(-2, N+1))
 x_values = [x_n(n) for n in n_values]
 
 # Plot the terms
