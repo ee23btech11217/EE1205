@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.2)  9 JAN 2024 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.2)  9 JAN 2024 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1414,19 +1414,19 @@ Package pdftex.def Info: figs/plot.png  used on input line 94.
 
 
  <./figs/plot.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
 
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
  ) 
 Here is how much of TeX's memory you used:
  28493 strings out of 483183
- 560985 string characters out of 5966293
+ 560984 string characters out of 5966293
  830910 words of memory out of 5000000
  42739 multiletter control sequences out of 15000+600000
  614289 words of font info for 202 fonts, out of 8000000 for 9000
@@ -1442,7 +1442,7 @@ are/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on main.pdf (1 page, 63833 bytes).
+Output written on main.pdf (1 page, 63835 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream
