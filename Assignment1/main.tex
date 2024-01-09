@@ -1,15 +1,48 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
 \usepackage{txfonts}
-\usepackage{tkz-euclide}
 \usepackage{listings}
-\usepackage{gvv}
-\usepackage[latin1]{inputenc}
-\usepackage{array}
-\usepackage{pgf}
-\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage[export]{adjustbox}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\newtheorem{rem}{Remark}
 
 \begin{document}
+\parindent 0px
 \bibliographystyle{IEEEtran}
 
 \vspace{3cm}
@@ -40,9 +73,9 @@
 \begin{align}
 	x \brak{1} & = \frac{x \brak{0}}{1} = -1 \\
 x \brak{2} & = \frac{x \brak{1}}{2} = -\frac{1}{2} \\
-x \brak{3} & = \frac{x \brak{2}}{3} = -\frac{1}{2   3} = -\frac{1}{6}\\
-x \brak{4} & = \frac{x \brak{3}}{4} = -\frac{1}{2   3   4} = -\frac{1}{24}\\
-x \brak{5} & = \frac{x \brak{4}}{5} = -\frac{1}{2   3   4   5} = -\frac{1}{120} \\
+	x \brak{3} & = \frac{x \brak{2}}{3} = -\frac{1}{\brak{2} \brak{3}} = -\frac{1}{6}\\
+	x \brak{4} & = \frac{x \brak{3}}{4} = -\frac{1}{\brak{2}   \brak{3} \brak{4}} = -\frac{1}{24}\\
+	x \brak{5} & = \frac{x \brak{4}}{5} = -\frac{1}{\brak{2} \brak{3} \brak{4} \brak{5}} = -\frac{1}{120} \\
 % \end{align} \\
 % % So the first five terms of the series are:
 % % $$-1 , -\frac{1}{2}, -\frac{1}{6}, -\frac{1}{24},  -\frac{1}{120}$$ \\
@@ -69,13 +102,11 @@ x \brak{5} & = \frac{x \brak{4}}{5} = -\frac{1}{2   3   4   5} = -\frac{1}{120} 
 
 \begin{align}
     X \brak{z} & = \sum_{n=-\infty}^{\infty} x \brak{n}   z^{-n} \\
-    & = \sum_{n=-\infty}^{\infty} \frac{-1}{n!}  u \brak{n}   z^{-n} & \text{using } \eqref{x(n)}\\
+    \notag \text{using \eqref{x(n)}, } \\
+    & = \sum_{n=-\infty}^{\infty} \frac{-1}{n!}  u \brak{n}   z^{-n} \\
     & = \sum_{n=0}^{\infty} \frac{-1}{n!}   z^{-n} \\
     & = - e^{z^{-1}} &  \cbrak{z\in\mathbb{C} : z \neq 0} 
 \end{align}
-
-So, the Z-transform of the given series is
-$ - e^{z^{-1}} $.\\
 
 % For the series to converge, the ratio test must be satisfied for n $\geq$ 0
 % \begin{align}
