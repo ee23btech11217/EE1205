@@ -1,0 +1,110 @@
+% \iffalse
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}       
+\usepackage[latin1]{inputenc}   
+\usepackage{array}  
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+
+\vspace{3cm}
+
+\title{}
+\author{EE23BTECH11217 - Prajwal M$^{*}$
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{Exercise 9.1}
+The given figure shows a series LCR circuit connected to a variable
+frequency 230 V source. \\
+L = 5.0 H, C = 80 $\mu$F, R = 40 $\Omega$.
+
+\begin{figure}[h!]
+\begin{center}
+\begin{circuitikz}[american voltages]
+      \draw (0,0)
+      to[sV, l=$\varepsilon$] (0,2) 
+      to[R, l=$R$, v=$V_R$] (4,2) 
+      to[C, l=$C$, v=$V_C$] (4,0)
+      to[L, l=$L$, v=$V_L$] (0,0);
+\end{circuitikz}
+\end{center}
+\end{figure}
+
+\begin{enumerate}
+    \item Determine the source frequency which drives the circuit in resonance.
+    \item Obtain the impedance of the circuit and the amplitude of current
+at the resonating frequency.
+    \item Determine the rms potential drops across the three elements of
+the circuit. Show that the potential drop across the LC
+combination is zero at the resonating frequency.\\
+\end{enumerate}
+
+Solution:
+\begin{table}[h]
+    \centering
+    \input{tables/table1}
+    \caption{Parameter description}
+    \label{tab:my_label}
+\end{table}
+\begin{enumerate}
+\item 
+\begin{align}
+    \omega_{\text{res}} & = \frac{1}{\sqrt{LC}} \\
+    \omega_{\text{res}} & = \frac{1}{\sqrt{(5.0 \, \text{H})(80 \times 10^{-6} \, \text{F})}} \\ 
+    % \omega_{\text{res}} & = \sqrt{\frac{1}{4 \times 10^{-4}}} \\
+    % \omega_{\text{res}} & \approx \sqrt{2500} \\
+    \omega_{\text{res}} & \approx 50 \, \text{rad/s} \\
+\end{align}
+
+% The source frequency which drives the circuit in
+% resonance is 50 rad/s. \\
+\item 
+\begin{align}
+    % Z & = R + j(\omega L - \frac{j}{\omega C})\\
+    % \notag\text{at resonance ($\omega = \omega_{res}$),}\\
+    Z_{\text{res}} & = R = 40 \,\Omega\\
+    I_{\text{res}} & = \frac{\sqrt{2}\varepsilon}{Z_{\text{res}}} \\
+    & = \frac{\sqrt{2}(230)}{40} \\
+    & = 8.1 \, \text{A} 
+\end{align}
+
+% The amplitude of current (\(I_{\text{res}}\)) at resonance,
+
+% Therefore, at the resonating frequency, the impedance of the circuit is \(40 \, \Omega\) and the amplitude of the current is \(8.1 \, \text{A}\).\\
+
+\item 
+% \(\omega_{\text{res}}\) = \(50 \, \text{rad/s}\), \(I_{\text{res}}\) is \(8.1 \, \text{A}\) (as calculated earlier).
+
+\begin{align}
+    I_{\text{rms}} & = \frac{I_{\text{res}}}{\sqrt{2}} \\
+    & = \frac{8.1}{\sqrt{2}} \\
+    & \approx 5.75 \, \text{A}\\
+    V_R & = I_{\text{rms}}   R \\
+    & = 5.75 \, \text{A} \times 40 \, \Omega \\
+    & \approx 230 \, \text{V} \\
+    V_L & = I_{\text{rms}}   \omega_{\text{res}} L \\
+    & = 5.75 \, \text{A} \times 50 \, \text{rad/s} \times 5.0 \, \text{H} \\
+    & \approx 1437.5 \, \text{V}  \\
+    V_C & = I_{\text{rms}}   \frac{1}{\omega_{\text{res}} C} \\
+    & = 5.75 \, \text{A} \times \frac{1}{50 \, \text{rad/s} \times 80 \times 10^{-6} \, \text{F}} \\
+    & \approx 1437.5 \, \text{V} \\
+    V_{LC} & = I_{\text{rms}}   \omega_{\text{res}} L - I_{\text{rms}}   \frac{1}{\omega_{\text{res}} C} \\
+    & = V_L - V_C \\
+    & = 1437.5 \, \text{V} - 1437.5 \, \text{V} = 0 \, \text{V}
+\end{align}
+\end{enumerate}
+\end{document}
+
