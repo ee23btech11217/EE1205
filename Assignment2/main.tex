@@ -63,14 +63,26 @@ $$
 \ldots + 0 + \frac{1^3}{1} + \frac{1^3 + 2^3}{1 + 3} + \frac{1^3 + 2^3 + 3^3}{1 + 3 + 5} + \ldots$$
 
 \noindent Solution: 
+
 \begin{align}
-    x(n) & = \frac{\sum_{i=0}^{n} (i+1)^3}{\sum_{j=0}^{n} (2j+1)} u(n)  \\
-    % & = \dfrac{\left(\frac{(n+1)(n + 2)}{2}\right)^2 }{(n+1)^2} \\
-    & = \frac{(n + 2)^2}{4} u(n) \label{x(n)}\\\notag\\
-    S(n) & = \sum_{r=-\infty}^{n} x(r)\\
+    x\brak{n} & = \frac{\sum_{i=0}^{n} \brak{i+1}^{3}}{\sum_{j=0}^{n} \brak{2j+1}} u\brak{n}  \\
+    & = \frac{\brak{n+1}^{3} * u\brak{n}}{\brak{2n+1} * u\brak{n}}u\brak{n}\\
+    & = \frac{\mathcal{Z}^{-1}\cbrak{\mathcal{Z}\cbrak{\brak{n+1}^{3}}\mathcal{Z}\cbrak{u\brak{n}}}}{\mathcal{Z}^{-1}\cbrak{\mathcal{Z}\cbrak{{2n+1}} \mathcal{Z}\cbrak{u\brak{n}}}} u\brak{n}\\
+    & = \frac{\mathcal{Z}^{-1}\cbrak{\brak{\frac{z^4+4z^3+z^2}{\brak{z-1}^4}}\brak{\frac{z}{z-1}}}}{\mathcal{Z}^{-1}\cbrak{ \brak{\frac{z^2 + z}{\brak{z-1}^2}}\brak{\frac{z}{z-1}}}} u\brak{n}\\
+    & = \frac{\frac{1}{2\pi j} \oint_C  \cbrak{\brak{\frac{z^5+4z^4+z^3}{\brak{z-1}^5}}z^{n-1}} dz}{\frac{1}{2\pi j} \oint_C  \cbrak{ \brak{\frac{z^3 + z^2}{\brak{z-1}^3}}z^{n-1}} dz}u\brak{n}\\
+    & = \frac{\frac{1}{4!} \lim_{n\rightarrow1}{\frac{d^4}{dz^4} \cbrak{z^{n+4}+4z^{n+3}+z^{n+2}}}}{\frac{1}{2!} \lim_{n\rightarrow1}{\frac{d^2}{dz^2} \cbrak{z^{n+2}+z^{n+1}}}}u\brak{n}\\
+    & = \frac{\brak{n + 2}^{2}}{4} u\brak{n} \label{x(n)}
+\end{align}
+\begin{align}
+    s\brak{n} & = \sum_{r=-\infty}^{n} x\brak{r}\\
     \notag \text{using \eqref{x(n)}, } \\
-    & = \sum_{r=-\infty}^{n} \frac{(r+2)^2}{4} u(r) \\
+    s\brak{n} & = \sum_{r=-\infty}^{n} \frac{\brak{r+2}^{2}}{4} u\brak{r} \\
     & = \sum_{r=0}^{n}\frac{r^2 + 4r + 4}{4} \\
+    & = 1 + \frac{37n}{24} + \frac{5n^2}{8} + \frac{n^3}{12}\\
+    & = \frac{\brak{n+2}^2}{4} u\brak{n}* u\brak{n}\\
+    & = \mathcal{Z}^{-1}\cbrak{\frac{z \brak{1 - 3 z + 4 z^2}}{4 (z - 1)^3}\frac{z}{z-1}}\\
+    & = \frac{1}{2\pi j} \oint_C  \cbrak{\brak{\frac{4z^4-3z^3 + z^2}{4\brak{z-1}^4}}z^{n-1}} dz\\
+    & = \frac{1}{3!} \lim_{n\rightarrow1}{\frac{d^3}{dz^3} \cbrak{z^{n+3}-\frac{3z^{n+2}}{4}+\frac{z^{n+1}}{4}}}\\
     & = 1 + \frac{37n}{24} + \frac{5n^2}{8} + \frac{n^3}{12}
 \end{align}
 
@@ -81,16 +93,6 @@ $$
    \label {fig: 11.9.5.25.1}
 \end{figure}
 
-\begin{align}
-    x \brak{n} & \system{Z} X \brak{z} \\
-    X \brak{z} = &  \sum_{n=-\infty}^{\infty} x \brak{n}   z^{-n} \\
-    \notag \text{using \eqref{x(n)}, } \\
-    = & \sum_{n=-\infty}^{\infty} \frac{(n + 2)^2}{4}u(n) z^{-n} \\
-    = & \sum_{n=0}^{\infty} \frac{(n + 2)^2}{4} z^{-n} \\
-    = & \sum_{n=0}^{\infty} \frac{n^2}{4}z^{-n} + \sum_{n=0}^{\infty} nz^{-n} \\
-    & + \sum_{n=0}^{\infty} z^{-n} \notag\\ %remove notag and '\\ &' before submitting
-    = & \frac{z(4z^2 - 3z + 1)}{4(z - 1)^3} & \cbrak{z\in\mathbb{C} : |z|>1}
-\end{align}
 \begin{table}[h]
     \centering
     \input{tables/table}
