@@ -1,4 +1,4 @@
-% \iffalse
+% \ffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{txfonts}
@@ -36,9 +36,9 @@ L = 5.0 H, C = 80 $\mu$F, R = 40 $\Omega$.
 \begin{circuitikz}[american voltages]
       \draw (0,0)
       to[sV, l=$\varepsilon$] (0,2) 
-      to[R, l=$R$, v=$V_R$] (4,2) 
-      to[C, l=$C$, v=$V_C$] (4,0)
-      to[L, l=$L$, v=$V_L$] (0,0);
+      to[R, l=$R$, v=$v_R$] (4,2) 
+      to[C, l=$C$, v=$v_C$] (4,0)
+      to[L, l=$L$, v=$v_L$] (0,0);
 \end{circuitikz}
 \end{center}
 \end{figure}
@@ -59,14 +59,29 @@ Solution:
     \caption{Parameter description}
     \label{tab:my_label}
 \end{table}
+\begin{figure}[h!]
+\begin{center}
+\begin{circuitikz}[american voltages]
+      \draw (0,0)
+      to[sV, l=$\varepsilon$] (0,2) 
+      to[R, l=$R$, v=$V_R$] (4,2) 
+      to[C, l=$\frac{-1}{sC}$, v=$V_C$] (4,0)
+      to[L, l=$sL$, v=$V_L$] (0,0);
+\end{circuitikz}
+\caption{s-domain circuit diagram}
+\label{fig: s-domain circuit}
+\end{center}
+\end{figure}
 \begin{enumerate}
 \item 
 \begin{align}
-    \omega_{\text{res}} & = \frac{1}{\sqrt{LC}} \\
-    \omega_{\text{res}} & = \frac{1}{\sqrt{(5.0 \, \text{H})(80 \times 10^{-6} \, \text{F})}} \\ 
+    V_L + V_C & = 0 \\
+    s_{\text{res}}L - \frac{1}{s_{\text{res}}C} & = 0\\
+    s_{\text{res}} & = \frac{1}{\sqrt{LC}} \\
+    s_{\text{res}} & = \frac{1}{\sqrt{(5.0 \, \text{H})(80 \times 10^{-6} \, \text{F})}} \\ 
     % \omega_{\text{res}} & = \sqrt{\frac{1}{4 \times 10^{-4}}} \\
     % \omega_{\text{res}} & \approx \sqrt{2500} \\
-    \omega_{\text{res}} & \approx 50 \, \text{rad/s} \\
+    s_{\text{res}} & = 50 \, \text{rad/s} 
 \end{align}
 
 % The source frequency which drives the circuit in
@@ -95,16 +110,16 @@ Solution:
     V_R & = I_{\text{rms}}   R \\
     & = 5.75 \, \text{A} \times 40 \, \Omega \\
     & \approx 230 \, \text{V} \\
-    V_L & = I_{\text{rms}}   \omega_{\text{res}} L \\
+    V_L & = I_{\text{rms}}   s_{\text{res}} L \\
     & = 5.75 \, \text{A} \times 50 \, \text{rad/s} \times 5.0 \, \text{H} \\
     & \approx 1437.5 \, \text{V}  \\
-    V_C & = I_{\text{rms}}   \frac{1}{\omega_{\text{res}} C} \\
-    & = 5.75 \, \text{A} \times \frac{1}{50 \, \text{rad/s} \times 80 \times 10^{-6} \, \text{F}} \\
-    & \approx 1437.5 \, \text{V} \\
-    V_{LC} & = I_{\text{rms}}   \omega_{\text{res}} L - I_{\text{rms}}   \frac{1}{\omega_{\text{res}} C} \\
-    & = V_L - V_C \\
+    V_C & = I_{\text{rms}}   \frac{-1}{s_{\text{res}} C} \\
+    & = 5.75 \, \text{A} \times \frac{-1}{50 \, \text{rad/s} \times 80 \times 10^{-6} \, \text{F}} \\
+    & \approx -1437.5 \, \text{V} \\
+    V_{LC} & = I_{\text{rms}}   s_{\text{res}} L - I_{\text{rms}}   \frac{1}{s_{\text{res}} C} \\
+    & = V_L + V_C \\
     & = 1437.5 \, \text{V} - 1437.5 \, \text{V} = 0 \, \text{V}
 \end{align}
 \end{enumerate}
 \end{document}
-
+i
