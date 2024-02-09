@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.10)  9 FEB 2024 10:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.10)  10 FEB 2024 03:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,55 +1019,56 @@ LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 28.
  (./tables/table.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (29.66722pt too wide) detected at line 52
+[]
+ []
 
 
-
-LaTeX Warning: Reference `9.5.25.1' on page 1 undefined on input line 67.
-
-
-LaTeX Warning: Reference `9.5.25.1' on page 1 undefined on input line 67.
+LaTeX Warning: Reference `shiftk' on page 1 undefined on input line 53.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `11.9.5.26.12' on page 1 undefined on input line 53.
 
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+Overfull \hbox (35.91515pt too wide) detected at line 59
+[]
+ []
+
+
+LaTeX Warning: Reference `shiftk' on page 1 undefined on input line 67.
+
+
+LaTeX Warning: Reference `11.9.5.26.10' on page 1 undefined on input line 67.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-
-LaTeX Warning: Reference `9.5.25.2' on page 2 undefined on input line 82.
-
-
-LaTeX Warning: Reference `9.5.25.2' on page 2 undefined on input line 82.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (1.22191pt too wide) detected at line 84
+[]
+ []
 
 <figs/plot.png, id=40, 406.6392pt x 312.6882pt>
 File: figs/plot.png Graphic file (type png)
 <use figs/plot.png>
-Package pdftex.def Info: figs/plot.png  used on input line 86.
+Package pdftex.def Info: figs/plot.png  used on input line 88.
 (pdftex.def)             Requested size: 229.5pt x 176.4783pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2] [3
-
- <./figs/plot.png>] (./main.aux)
+[2 <./figs/plot.png>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21872 strings out of 481239
- 452134 string characters out of 5920377
- 692957 words of memory out of 5000000
- 36557 multiletter control sequences out of 15000+600000
- 565402 words of font info for 105 fonts, out of 8000000 for 9000
+ 21870 strings out of 481239
+ 452098 string characters out of 5920377
+ 693964 words of memory out of 5000000
+ 36555 multiletter control sequences out of 15000+600000
+ 564224 words of font info for 103 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 76i,12n,91p,472b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,11n,91p,472b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1075,10 +1076,10 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 88584 bytes).
+Output written on main.pdf (2 pages, 88865 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
