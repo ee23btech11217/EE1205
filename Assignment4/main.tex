@@ -86,9 +86,11 @@ Solution:\\
     \label{fig: 9.1.12.2}
 \end{figure}
 
-from \figref{fig: 9.1.12.2},
+Using Mason's Gain Formula for \figref{fig: 9.1.12.2},
 \begin{align}
-    \frac{2R\brak{s} + Y\brak{s}}{s} + 3R\brak{s} & = Y\brak{s}\\
+    \frac{Y\brak{s}}{R\brak{s}} & = \frac{{\sum_{i=1}^{n} P_i\Delta_i}}{{\Delta}}\\
+    & = \frac{P_1\Delta_1 + P_2\Delta_2}{\Delta}\\
+    & = \frac{\frac{2}{s} + 3}{1 - \frac{1}{s}}\\
     \frac{Y\brak{s}}{R\brak{s}} & = \frac{3s+2}{s-1}
 \end{align}
 
