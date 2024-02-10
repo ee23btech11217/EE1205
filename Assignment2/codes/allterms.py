@@ -9,13 +9,13 @@ plt.close("all")
 
 # extract the first 20 terms of the data
 n = data[:20, 0]
-conv = data[:20, 1]
+conv_n = data[:20, 1]
 sum_n = data[:20, 2]
 
 # plot the graph
 highlight_index = 9
-plt.scatter(n, conv, color='red', marker='x', label='x(n)*u(n)') 
 plt.stem(n, sum_n, label='s(n)') 
+plt.scatter(n, conv_n, color='red', marker='x', label='x(n)*u(n)') 
 # Set labels and title
 plt.xlabel('n')
 plt.ylabel('s_n')
