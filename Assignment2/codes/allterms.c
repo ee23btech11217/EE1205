@@ -1,23 +1,58 @@
+// This code generates data by convolving two discrete inputs
+// y(n) = x(n) * u(n)
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
+#define SIZE 200 // Adjust the size according to your requirement
+
+void convolution(float input1[], float input2[], float output[], float size) {
+    for (int i = 0; i < size; i++) {
+        output[i] = 0;
+        for (int j = 0; j <= i; j++) {
+            output[i] += input1[j] * input2[i - j];
+        }
+    }
+}
 
 int main() {
-    FILE *fp;
-    fp = fopen("values.dat", "w"); // Open for writing in text mode
+    FILE *file;
+    file = fopen("allterms.dat", "w");
 
-    if (fp == NULL) {
+    if (file == NULL) {
         printf("Error opening file!\n");
         return 1;
     }
 
-    for (int n = 0; n <= 10; n++) {
-        double xn = (n + 2)*(n + 2) / 4.0;
-        fprintf(fp, "%d %lf\n", n, xn); // Write n and xn to file, separated by a space
+    int size = SIZE;
+    float u_n[SIZE], s_n[SIZE], conv_output[SIZE];
+
+    // Initialize u(n)
+    for (int i = 0; i < size; i++) {
+        u_n[i] = (i >= 0) ? 1 : 0;
+    }
+    
+    for (int i = 0; i < size; i++) {
+        s_n[i] = (1.0 + 37*i/24.0 + 5.0*pow(i,2)/8 + pow(i,3)/12) * u_n[i];
     }
 
-    fclose(fp); // Close the file
+    // Generate (10+6n)u(n)
+    float input1[SIZE];
+    for (int i = 0; i < size; i++) {
+        input1[i] = (i+2)*(i+2)/4 * u_n[i];
+    }
+
+    // Convolve (10+6n)u(n) with u(n)
+    convolution(input1, u_n, conv_output, size);
+
+    // Headers 
+    fprintf(file, "n   x(n)*u(n)  s(n)\n");
+
+
+    // Store the result in a text file
+    for (int i = 0; i < size; i++) {
+        fprintf(file, "%d   %f   %f\n",i, conv_output[i], s_n[i]);
+    }
+
+    fclose(file);
 
     return 0;
 }
-

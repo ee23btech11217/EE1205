@@ -1,13 +1,27 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Load the data from 'values.dat'
-data = np.loadtxt('values.dat')
-n = data[:, 0].astype(int)  # n values as integers
-xn = data[:, 1]  # x(n) values as floats
+# import the data from the text file
+data = np.loadtxt("allterms.dat", skiprows=1)
 
-# Plotting
-plt.stem(n, xn, basefmt=" ")
+# clear all the previous figures
+plt.close("all")
+
+# extract the first 20 terms of the data
+n = data[:20, 0]
+conv = data[:20, 1]
+sum_n = data[:20, 2]
+
+# plot the graph
+highlight_index = 9
+plt.scatter(n, conv, color='red', marker='x', label='x(n)*u(n)') 
+plt.stem(n, sum_n, label='s(n)') 
+# Set labels and title
 plt.xlabel('n')
-plt.ylabel('$x(n)$')
-plt.savefig('plot.png', dpi = 300, bbox_inches = 'tight')
+plt.ylabel('s_n')
+plt.title('Verification')
+
+# Add legend
+plt.legend()
+
+plt.savefig("plot.png")
