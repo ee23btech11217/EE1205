@@ -68,7 +68,7 @@
     \centering
     \input{figs/block}
     \caption{block diagram}
-    \label{fig:9.1.12.1}
+    \label{fig: 217.9.1.12.1}
 \end{figure}
 
 Solution:\\
@@ -76,14 +76,14 @@ Solution:\\
     \centering
     \input{tables/table}
     \caption{Parameters}
-    \label{tab:9.1.12.1}
+    \label{tab: 217.9.1.12.1}
 \end{table}
 
 \begin{figure}[h]
     \centering
     \input{figs/sfg}
     \caption{signal flow graph}
-    \label{fig: 9.1.12.2}
+    \label{fig: 217.9.1.12.2}
 \end{figure}
 \begin{align}
     P_1 & = 2\brak{\frac{1}{s}} = \frac{2}{s}\\
@@ -93,19 +93,28 @@ Solution:\\
     L_1 & = \frac{1}{s}\\
     \Delta & = 1 - L_1 = 1 - \frac{1}{s}
 \end{align}
-from \figref{fig: 9.1.12.2} using Mason's Gain Formula,
+from \figref{fig: 217.9.1.12.2} using Mason's Gain Formula,
 \begin{align}
     \frac{Y\brak{s}}{R\brak{s}} & = \frac{{\sum_{i=1}^{n} P_i\Delta_i}}{{\Delta}}\\
     & = \frac{P_1\Delta_1 + P_2\Delta_2}{\Delta}\\
     & = \frac{\frac{2}{s} + 3}{1 - \frac{1}{s}}\\
-    H\brak{s} & = \frac{Y\brak{s}}{R\brak{s}} = \frac{3s+2}{s-1}\\
+    H\brak{s} & = \frac{Y\brak{s}}{R\brak{s}} = \frac{3s+2}{s-1}
+\end{align}
+\begin{align}
     H\brak{s} & = \frac{5}{s-1} + 3\\
     H\brak{s} & \system{L^-1} h\brak{t}\\
-    H\brak{s} &\system{L^-1} h\brak{t}\\
-    \frac{5}{s-1} & \system{L^-1} 5e^t\\
-    3 & \system{L^-1} 3\delta\brak{t}\\
+    \frac{5}{s-1} & \system{L^-1} 5e^t\label{eq: 217.9.1.12.1}\\
+    3 & \system{L^-1} 3\delta\brak{t}\label{eq: 217.9.1.12.2}\\
+    \text{using \eqref{eq: 217.9.1.12.1} and \eqref{eq: 217.9.1.12.2},}\notag\\
     h\brak{t} & = 5e^t + 3\delta\brak{t}
 \end{align}
 
+
+\begin{figure}
+    \centering
+	\includegraphics[width=\linewidth]{figs/plot.png}
+    \caption{Plot of impulse response of the system}
+    \label{fig: 217.9.1.12.3}
+\end{figure}
 
 \end{document}
