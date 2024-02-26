@@ -1,0 +1,9 @@
+
+*Title: case(ii) transient analysis
+R1 1 2 100   
+L1 2 3 0.5m 
+C1 3 0 10u   
+V1 1 0 AC 230V 
+
+.AC DEC 10 1Hz 1MegHz 
+.END

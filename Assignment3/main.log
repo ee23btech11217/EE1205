@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.10)  29 JAN 2024 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.10)  27 FEB 2024 00:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1165,68 +1165,81 @@ LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
+(./figs/question.tex
 \realshift=\dimen334
 \realshift=\dimen335
-\alshift=\dimen336
-\absvshift=\dimen337
-\realshift=\dimen338
-\alshift=\dimen339
-\absvshift=\dimen340
-\realshift=\dimen341
-\alshift=\dimen342
-\absvshift=\dimen343
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+\realshift=\dimen336
+\realshift=\dimen337
+)
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
 
  []
 
 (./tables/table1.tex)
-\realshift=\dimen344
+Overfull \hbox (14.88712pt too wide) in paragraph at lines 1--50
+ [][] 
+ []
+
+(./figs/sdomain.tex
+\realshift=\dimen338
+\realshift=\dimen339
+\alshift=\dimen340
+\absvshift=\dimen341
+\realshift=\dimen342
+\alshift=\dimen343
+\absvshift=\dimen344
 \realshift=\dimen345
 \alshift=\dimen346
 \absvshift=\dimen347
-\realshift=\dimen348
-\alshift=\dimen349
-\absvshift=\dimen350
-\realshift=\dimen351
-\alshift=\dimen352
-\absvshift=\dimen353
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \vbox (badness 4518) has occurred while \output is active []
+
+<figs/impedance.png, id=29, 578.16pt x 433.62pt>
+File: figs/impedance.png Graphic file (type png)
+<use figs/impedance.png>
+Package pdftex.def Info: figs/impedance.png  used on input line 76.
+(pdftex.def)             Requested size: 252.0pt x 189.00032pt.
 
 
-Underfull \vbox (badness 7504) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+]
+Overfull \hbox (31.83443pt too wide) detected at line 110
+[]
+ []
 
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+(./tables/table2.tex)
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] [2
-
-] (./main.aux) ) 
+[2 <./figs/impedance.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 33539 strings out of 481239
- 806273 string characters out of 5920377
- 1185417 words of memory out of 5000000
- 48188 multiletter control sequences out of 15000+600000
- 608879 words of font info for 190 fonts, out of 8000000 for 9000
+ 33568 strings out of 481239
+ 806274 string characters out of 5920377
+ 1180797 words of memory out of 5000000
+ 48207 multiletter control sequences out of 15000+600000
+ 607563 words of font info for 188 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 76i,15n,91p,472b,959s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
-r/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 50392 bytes).
+ 76i,14n,91p,472b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/e
+nc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/
+rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 83648 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

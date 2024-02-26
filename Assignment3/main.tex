@@ -1,4 +1,4 @@
-% \ffalse
+% \iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{txfonts}
@@ -27,25 +27,16 @@
 \renewcommand{\thetable}{\theenumi}
 
 \section*{Exercise 9.1}
-The given figure shows a series LCR circuit connected to a variable
-frequency 230 V source. \\
+The given figure shows a series LCR circuit connected to a sinusoidal 230 V source. \\
 L = 5.0 H, C = 80 $\mu$F, R = 40 $\Omega$.
 
-\begin{figure}[h!]
-\begin{center}
-\begin{circuitikz}[american voltages]
-      \draw (0,0)
-      to[sV, l=$\varepsilon$] (0,2) 
-      to[R, l=$R$, v=$v_R$] (4,2) 
-      to[C, l=$C$, v=$v_C$] (4,0)
-      to[L, l=$L$, v=$v_L$] (0,0);
-\end{circuitikz}
-\end{center}
+\begin{figure}[h]
+\input{figs/question.tex}
 \end{figure}
 
 \begin{enumerate}
     \item Determine the source frequency which drives the circuit in resonance.
-    \item Obtain the impedance of the circuit and the amplitude of current
+    \item Obtain the impedance of the circuit
 at the resonating frequency.
     \item Determine the rms potential drops across the three elements of
 the circuit. Show that the potential drop across the LC
@@ -57,69 +48,74 @@ Solution:
     \centering
     \input{tables/table1}
     \caption{Parameter description}
-    \label{tab:my_label}
+    \label{tab:217.tab.1}
 \end{table}
-\begin{figure}[h!]
-\begin{center}
-\begin{circuitikz}[american voltages]
-      \draw (0,0)
-      to[sV, l=$\varepsilon$] (0,2) 
-      to[R, l=$R$, v=$V_R$] (4,2) 
-      to[C, l=$\frac{-1}{sC}$, v=$V_C$] (4,0)
-      to[L, l=$sL$, v=$V_L$] (0,0);
-\end{circuitikz}
-\caption{s-domain circuit diagram}
-\label{fig: s-domain circuit}
-\end{center}
+\begin{figure}[h]
+	\input{figs/sdomain.tex}
 \end{figure}
+
+\begin{align}
+    V\brak{t} &\system{Z} V\brak{s}\\
+    230\sqrt{2} cos\brak{2\pi f t} &\system{Z} V\brak{s}\\
+    V\brak{s} & = \frac{230\sqrt{2}s}{s^2 + \brak{2\pi f}^2}\label{217.eq.1}
+\end{align}
+using KVL, 
+\begin{align}
+    V\brak{s} & - I\brak{s} R - \frac{I\brak{s}}{sC} - I\brak{s}sL = 0\\
+    Z = \frac{V\brak{s}}{I\brak{s}} & = \frac{sCR + s^2LC + 1}{sC}\label{217.eq.2}
+\end{align}
+replacing $s = j2\pi f$ in \eqref{217.eq.2},
+\begin{align}
+    Z & = R + j\brak{1-\brak{2\pi f}^2LC}\\
+    min\brak{|Z|} & = R \text{ at } f = \frac{1}{2\pi\sqrt{LC}}\\ 
+    f_{res} & = \frac{1}{\sqrt{LC}} = 7.958 Hz\label{217.eq.3}\\
+    Z_{res} & = R = 40 \Omega\label{217.eq.4}
+\end{align}
+\begin{figure}[h]
+    \centering
+	\includegraphics[width=\columnwidth]{figs/impedance.png}
+    \caption{Impedance vs frequency}
+    \label{217.fig.3}
+\end{figure}
+substituting \eqref{217.eq.3} and \eqref{217.eq.4} in \eqref{217.eq.1}, \eqref{217.eq.2},
+\begin{align}
+    I\brak{s} & = \brak{\frac{1}{40}}\frac{230\sqrt{2}s}{s^2 + 50^2}\label{217.eq.6}\\
+    I\brak{s} & \system{L^{-1}} I\brak{t}\\
+    I\brak{t} & = \brak{8.132} cos\brak{50 t} \label{217.eq.5}
+\end{align}
+
 \begin{enumerate}
-\item 
-\begin{align}
-    V_L + V_C & = 0 \\
-    s_{\text{res}}L - \frac{1}{s_{\text{res}}C} & = 0\\
-    s_{\text{res}} & = \frac{1}{\sqrt{LC}} \\
-    s_{\text{res}} & = \frac{1}{\sqrt{(5.0 \, \text{H})(80 \times 10^{-6} \, \text{F})}} \\ 
-    % \omega_{\text{res}} & = \sqrt{\frac{1}{4 \times 10^{-4}}} \\
-    % \omega_{\text{res}} & \approx \sqrt{2500} \\
-    s_{\text{res}} & = 50 \, \text{rad/s} 
-\end{align}
-
-% The source frequency which drives the circuit in
-% resonance is 50 rad/s. \\
-\item 
-\begin{align}
-    % Z & = R + j(\omega L - \frac{j}{\omega C})\\
-    % \notag\text{at resonance ($\omega = \omega_{res}$),}\\
-    Z_{\text{res}} & = R = 40 \,\Omega\\
-    I_{\text{res}} & = \frac{\sqrt{2}\varepsilon}{Z_{\text{res}}} \\
-    & = \frac{\sqrt{2}(230)}{40} \\
-    & = 8.1 \, \text{A} 
-\end{align}
-
-% The amplitude of current (\(I_{\text{res}}\)) at resonance,
-
-% Therefore, at the resonating frequency, the impedance of the circuit is \(40 \, \Omega\) and the amplitude of the current is \(8.1 \, \text{A}\).\\
-
-\item 
-% \(\omega_{\text{res}}\) = \(50 \, \text{rad/s}\), \(I_{\text{res}}\) is \(8.1 \, \text{A}\) (as calculated earlier).
-
-\begin{align}
-    I_{\text{rms}} & = \frac{I_{\text{res}}}{\sqrt{2}} \\
-    & = \frac{8.1}{\sqrt{2}} \\
-    & \approx 5.75 \, \text{A}\\
-    V_R & = I_{\text{rms}}   R \\
-    & = 5.75 \, \text{A} \times 40 \, \Omega \\
-    & \approx 230 \, \text{V} \\
-    V_L & = I_{\text{rms}}   s_{\text{res}} L \\
-    & = 5.75 \, \text{A} \times 50 \, \text{rad/s} \times 5.0 \, \text{H} \\
-    & \approx 1437.5 \, \text{V}  \\
-    V_C & = I_{\text{rms}}   \frac{-1}{s_{\text{res}} C} \\
-    & = 5.75 \, \text{A} \times \frac{-1}{50 \, \text{rad/s} \times 80 \times 10^{-6} \, \text{F}} \\
-    & \approx -1437.5 \, \text{V} \\
-    V_{LC} & = I_{\text{rms}}   s_{\text{res}} L - I_{\text{rms}}   \frac{1}{s_{\text{res}} C} \\
-    & = V_L + V_C \\
-    & = 1437.5 \, \text{V} - 1437.5 \, \text{V} = 0 \, \text{V}
-\end{align}
+    \item[R: ]
+    \begin{align}
+    V_R\brak{s} & = RI\brak{s}\\
+    V_R\brak{s} & \system{L^{-1}} V_R\brak{t}\\
+    V_R\brak{t} & = RI\brak{t}\\
+    & = 325.28 \, cos\brak{50 t} &\cbrak{\text{using \eqref{217.eq.5}}}\\
+    \end{align}
+    \item[C: ]
+    \begin{align}
+    V_C\brak{s} & = \frac{I\brak{s}}{sC}\\
+    & = \frac{10^4}{32}\frac{230\sqrt{2}}{s^2 + 50^2} &\cbrak{\text{using \eqref{217.eq.6}}}\\
+    V_C\brak{s} & \system{L^{-1}} V_C\brak{t}\\
+    V_C\brak{t} & = 2032.93 \, sin\brak{50 t} \label{217.eq.7}
+    \end{align}
+    \item[L:] 
+    \begin{align}
+    V_L\brak{s} & = sLI\brak{s}\\
+    & = \frac{1}{8}\frac{230\sqrt{2}s^2}{s^2 + 50^2} &\cbrak{\text{using \eqref{217.eq.6}}}\\
+    V_L\brak{s} & \system{L^{-1}} V_L\brak{t}\\
+    V_L\brak{t} & = 40.658 \brak{ \delta\brak{t} - 50sin\brak{50 t}}\\
+    \text{for } t>0, \\
+    & = -2032.93sin\brak{50 t} \label{217.eq.8}
+    \end{align}
 \end{enumerate}
+
+from \eqref{217.eq.7} and \eqref{217.eq.8}, voltage across LC combination is $V_C + V_L = 0 V$
+\begin{table}[h]
+    \centering
+    \input{tables/table2}
+    \caption{Solution values}
+    \label{tab:217.tab.2}
+\end{table}
+
 \end{document}
-i
