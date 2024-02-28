@@ -7,16 +7,18 @@ L = 5
 C = 80e-6
 
 # Define a range of frequencies
-frequencies = np.linspace(0, 10, 1000)  # You can adjust the range and number of points as needed
+omega = np.linspace(0, 100, 100)  # You can adjust the range and number of points as needed
 
 # Calculate the modulus of Z for each frequency
-modulus_Z = np.sqrt(R**2 + (1 - (2 * np.pi * frequencies)**2 * L * C)**2)
+modulus_Z = np.sqrt(R**2 + (1 - (omega)**2 * L * C)**2)
 
 # Plotting
 plt.figure(figsize=(8, 6))
-plt.plot(frequencies, modulus_Z, label='|Z|')
+plt.plot(omega, modulus_Z, label='|Z|')
+plt.scatter(50, 40)
+plt.text(50, 40, '(50, 40)', verticalalignment='bottom', horizontalalignment='right')  # Add text at (50, 40)
 plt.title('Impedance vs Frequency')
-plt.xlabel('Frequency (f)')
+plt.xlabel('Frequency ($\omega$)')
 plt.ylabel('|Z|')
 plt.grid(True)
 plt.yscale('log')

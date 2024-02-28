@@ -54,61 +54,36 @@ Solution:
 	\input{figs/sdomain.tex}
 \end{figure}
 
+
+from \figref{217.fig.2},
 \begin{align}
-    V\brak{t} &\system{L} V\brak{s}\\
-    230\sqrt{2} cos\brak{2\pi f t} &\system{L} V\brak{s}\\
-    V\brak{s} & = \frac{230\sqrt{2}s}{s^2 + \brak{2\pi f}^2}\label{217.eq.1}
-\end{align}
-using KVL, 
-\begin{align}
-    V\brak{s} & - I\brak{s} R - \frac{I\brak{s}}{sC} - I\brak{s}sL = 0\\
-    Z = \frac{V\brak{s}}{I\brak{s}} & = \frac{sCR + s^2LC + 1}{sC}\label{217.eq.2}
-\end{align}
-replacing $s = j2\pi f$ in \eqref{217.eq.2},
-\begin{align}
-    Z & = R + j\brak{1-\brak{2\pi f}^2LC}\\
-    min\brak{|Z|} & = R \text{ at } f = \frac{1}{2\pi\sqrt{LC}}\\ 
-    f_{res} & = \frac{1}{\sqrt{LC}} = 7.958 Hz\label{217.eq.3}\\
+    Z & = R + j\brak{\omega L - \frac{1}{\omega C}}\\
+    min\brak{|Z|} & = R \text{ at } \omega = \frac{1}{\sqrt{LC}}\\ 
+    f_{res} = \frac{\omega_{res}}{2\pi} & = \frac{1}{2\pi\sqrt{LC}} = 7.958 Hz \label{217.eq.3}\\
     Z_{res} & = R = 40 \Omega\label{217.eq.4}
 \end{align}
-\begin{figure}[h]
-    \centering
-	\includegraphics[width=\columnwidth]{figs/impedance.png}
-    \caption{Impedance vs frequency}
-    \label{217.fig.3}
-\end{figure}
-substituting \eqref{217.eq.3} and \eqref{217.eq.4} in \eqref{217.eq.1}, \eqref{217.eq.2},
+
 \begin{align}
-    I\brak{s} & = \brak{\frac{1}{40}}\frac{230\sqrt{2}s}{s^2 + 50^2}\label{217.eq.6}\\
-    I\brak{s} & \system{L^{-1}} I\brak{t}\\
-    I\brak{t} & = \brak{8.132} cos\brak{50 t} \label{217.eq.5}
+    I_{res} & = \frac{\varepsilon}{Z_{res}}\\
+    & = \brak{\frac{230\sqrt{2}e^{j\omega_{res}t}}{R}}\label{217.eq.6}\\
+    I_{res} & = \brak{8.132}e^{j50t}\label{217.eq.5}\\
+    V_R & = Re\cbrak{RI_{res}}\\
+    & = Re\cbrak{325.28e^{j50t}} &\cbrak{\text{using \eqref{217.eq.5}}}\\
+    & = 325.28 cos\brak{50t}\\
+    V_C & = Re\cbrak{\frac{-j}{\omega_{res}C}I_{res}}\\
+    & = Re\cbrak{2032.93 e^{j\brak{50t - \frac{\pi}{2}}}} &\cbrak{\text{using \eqref{217.eq.5}}}\\
+    & = 2031.93 sin\brak{50t} \label{217.eq.7}\\
+    V_L& = Re\cbrak{j\omega_{res}LI_{res}}\\
+    & = Re\cbrak{2032.93e^{j\brak{50t + \frac{\pi}{2}}}} &\cbrak{\text{using \eqref{217.eq.5}}}\\
+    & = - 2031.93 sin\brak{50t} \label{217.eq.8}
 \end{align}
 
-\begin{enumerate}
-    \item[R: ]
-    \begin{align}
-    V_R\brak{s} & = RI\brak{s}\\
-    V_R\brak{s} & \system{L^{-1}} V_R\brak{t}\\
-    V_R\brak{t} & = RI\brak{t}\\
-    & = 325.28 \, cos\brak{50 t} &\cbrak{\text{using \eqref{217.eq.5}}}\\
-    \end{align}
-    \item[C: ]
-    \begin{align}
-    V_C\brak{s} & = \frac{I\brak{s}}{sC}\\
-    & = \frac{10^4}{32}\frac{230\sqrt{2}}{s^2 + 50^2} &\cbrak{\text{using \eqref{217.eq.6}}}\\
-    V_C\brak{s} & \system{L^{-1}} V_C\brak{t}\\
-    V_C\brak{t} & = 2032.93 \, sin\brak{50 t} \label{217.eq.7}
-    \end{align}
-    \item[L:] 
-    \begin{align}
-    V_L\brak{s} & = sLI\brak{s}\\
-    & = \frac{1}{8}\frac{230\sqrt{2}s^2}{s^2 + 50^2} &\cbrak{\text{using \eqref{217.eq.6}}}\\
-    V_L\brak{s} & \system{L^{-1}} V_L\brak{t}\\
-    V_L\brak{t} & = 40.658 \brak{ \delta\brak{t} - 50sin\brak{50 t}}\\
-    \text{for } t>0, \\
-    & = -2032.93sin\brak{50 t} \label{217.eq.8}
-    \end{align}
-\end{enumerate}
+\begin{figure}[h]
+     \centering
+	\includegraphics[width=\columnwidth]{figs/impedance.png}
+     \caption{Impedance vs frequency}
+     \label{217.fig.3}
+\end{figure}
 
 from \eqref{217.eq.7} and \eqref{217.eq.8}, voltage across LC combination is $V_C + V_L = 0 V$
 \begin{table}[h]
