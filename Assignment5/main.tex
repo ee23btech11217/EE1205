@@ -1,0 +1,62 @@
+% \iffalse
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}       
+\usepackage[latin1]{inputenc}   
+\usepackage{array}  
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+
+\vspace{3cm}
+
+\title{}
+\author{EE23BTECH11217 - Prajwal M$^{*}$
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{EE 16}
+The steady state output $V_{out}$ of the circuit shown below, will
+\begin{figure}[h]
+    \centering
+    \input{figs/ques}
+    \caption{circuit}
+    \label{fig: 217.EE.16.1}
+\end{figure}
+
+\begin{enumerate}
+    \item saturate to $+V_{DD}$
+    \item saturate to $-V_{EE}$
+    \item become equal to $0.1V$
+    \item become equal to $-0.1V$
+\end{enumerate}
+
+\noindent Solution: \\
+
+% \begin{figure}[h]
+%     \centering
+%     \input{figs/sol}
+%     \caption{circuit}
+%     \label{fig: 217.EE.16.2}
+% \end{figure}
+
+\begin{align}
+    \frac{V_{-} - 0.1}{R_1} + C_1\frac{d \brak{V_{-} - V_{out}}}{dt} & = 0\\
+    \frac{d \brak{V_{out}}}{dt} & = -\frac{1}{R_1C_1}\\
+    V_{out} & = -\frac{1}{R_1C_1}t\\
+    V_{out} & = max\cbrak{-V_{EE}, -\frac{1}{R_1C_1}t}\\
+\end{align}
+
+for $t>V_{EE}R_1C_1$, $V_{out}$ saturates to $-V_{EE}$
+\end{document}
