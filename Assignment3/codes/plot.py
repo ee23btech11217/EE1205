@@ -1,27 +1,21 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Constants
-R = 40
-L = 5
-C = 80e-6
+# Define the parameters
+frequency = 50  # Frequency in Hz
+omega = 2 * np.pi * frequency  # Angular frequency
+t = np.linspace(0, 0.1, 1000)  # Time vector from 0 to 0.1 seconds
 
-# Define a range of frequencies
-omega = np.linspace(0, 100, 100)  # You can adjust the range and number of points as needed
+# Define the voltage function
+V = 230 * np.sqrt(2) * np.exp(1j * omega * t)
 
-# Calculate the modulus of Z for each frequency
-modulus_Z = np.sqrt(R**2 + (1 - (omega)**2 * L * C)**2)
-
-# Plotting
-plt.figure(figsize=(8, 6))
-plt.plot(omega, modulus_Z, label='|Z|')
-plt.scatter(50, 40)
-plt.text(50, 40, '(50, 40)', verticalalignment='bottom', horizontalalignment='right')  # Add text at (50, 40)
-plt.title('Impedance vs Frequency')
-plt.xlabel('Frequency ($\omega$)')
-plt.ylabel('|Z|')
-plt.grid(True)
-plt.yscale('log')
+# Plot the real and imaginary parts
+plt.figure(figsize=(10, 6))
+plt.plot(t, V.real, label='Input voltage')
+plt.xlabel('Time (s)')
+plt.ylabel('Voltage (V)')
+plt.title('Input Voltage vs Time (50 Hz)')
 plt.legend()
-plt.savefig("../figs/impedance.png")
+plt.grid(True)
 plt.show()
+

@@ -54,28 +54,17 @@ Solution:
 	\input{figs/sdomain.tex}
 \end{figure}
 
-
+\begin{enumerate}
+\item 
 from \figref{217.fig.2},
 \begin{align}
     Z & = R + j\brak{\omega L - \frac{1}{\omega C}}\\
     min\brak{|Z|} & = R \text{ at } \omega = \frac{1}{\sqrt{LC}}\\ 
-    f_{res} = \frac{\omega_{res}}{2\pi} & = \frac{1}{2\pi\sqrt{LC}} = 7.958 Hz \label{217.eq.3}\\
-    Z_{res} & = R = 40 \Omega\label{217.eq.4}
+    f_{res} = \frac{\omega_{res}}{2\pi} & = \frac{1}{2\pi\sqrt{LC}} = 7.958 Hz \label{217.eq.3}
 \end{align}
-
+\item 
 \begin{align}
-    I_{res} & = \frac{\varepsilon}{Z_{res}}\\
-    & = \brak{\frac{230\sqrt{2}e^{j\omega_{res}t}}{R}}\label{217.eq.6}\\
-    I_{res} & = \brak{8.132}e^{j50t}\label{217.eq.5}\\
-    V_R & = Re\cbrak{RI_{res}}\\
-    & = Re\cbrak{325.28e^{j50t}} &\cbrak{\text{using \eqref{217.eq.5}}}\\
-    & = 325.28 cos\brak{50t}\\
-    V_C & = Re\cbrak{\frac{-j}{\omega_{res}C}I_{res}}\\
-    & = Re\cbrak{2032.93 e^{j\brak{50t - \frac{\pi}{2}}}} &\cbrak{\text{using \eqref{217.eq.5}}}\\
-    & = 2031.93 sin\brak{50t} \label{217.eq.7}\\
-    V_L& = Re\cbrak{j\omega_{res}LI_{res}}\\
-    & = Re\cbrak{2032.93e^{j\brak{50t + \frac{\pi}{2}}}} &\cbrak{\text{using \eqref{217.eq.5}}}\\
-    & = - 2031.93 sin\brak{50t} \label{217.eq.8}
+    Z_{res} & = R = 40 \Omega\label{217.eq.4}
 \end{align}
 
 \begin{figure}[h]
@@ -85,7 +74,28 @@ from \figref{217.fig.2},
      \label{217.fig.3}
 \end{figure}
 
+\item 
+\begin{align}
+    I_{res} & = \frac{\varepsilon}{Z_{res}}\label{217.eq.5}\\
+    % & = \brak{\frac{230\sqrt{2}e^{j\omega_{res}t}}{R}}\\
+    % I_{res} & = \brak{8.132}e^{j50t}\label{217.eq.5}\\
+    V_R & = Re\cbrak{RI_{res}}\\
+    & = Re\cbrak{R\frac{\varepsilon}{Z_{res}}}&\cbrak{\text{using \eqref{217.eq.5}}}\\
+    & = Re\cbrak{325.28e^{j50t}}\\
+    & = 325.28 cos\brak{50t}\\
+    V_C & = Re\cbrak{\frac{-j}{\omega_{res}C}I_{res}}\\
+    & = Re\cbrak{\frac{-j}{\omega_{res}C}\frac{\varepsilon}{Z_{res}}}&\cbrak{\text{using \eqref{217.eq.5}}}\\
+    & = Re\cbrak{2032.93 e^{j\brak{50t - \frac{\pi}{2}}}}\\
+    & = 2031.93 sin\brak{50t} \label{217.eq.7}\\
+    V_L& = Re\cbrak{j\omega_{res}LI_{res}}\\
+    & = Re\cbrak{j\omega_{res}L\frac{\varepsilon}{Z_{res}}}&\cbrak{\text{using \eqref{217.eq.5}}}\\
+    & = Re\cbrak{2032.93e^{j\brak{50t + \frac{\pi}{2}}}}\\
+    & = - 2031.93 sin\brak{50t} \label{217.eq.8}
+\end{align}
+
 from \eqref{217.eq.7} and \eqref{217.eq.8}, voltage across LC combination is $V_C + V_L = 0 V$
+\end{enumerate}
+
 \begin{table}[h]
     \centering
     \input{tables/table2}
@@ -93,4 +103,17 @@ from \eqref{217.eq.7} and \eqref{217.eq.8}, voltage across LC combination is $V_
     \label{tab:217.tab.2}
 \end{table}
 
+\begin{figure}[h]
+     \centering
+	\includegraphics[width=\columnwidth]{figs/Vin.png}
+     \caption{Input voltage}
+     \label{217.fig.5}
+\end{figure}
+
+\begin{figure}[h]
+     \centering
+     \includegraphics[width=\columnwidth]{figs/LCvoltage.png}
+     \caption{Voltage across LC combination}
+     \label{217.fig.4}
+\end{figure}
 \end{document}

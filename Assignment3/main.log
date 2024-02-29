@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.10)  28 FEB 2024 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.10)  29 FEB 2024 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,38 +1198,58 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/impedance.png, id=29, 578.16pt x 433.62pt>
 File: figs/impedance.png Graphic file (type png)
 <use figs/impedance.png>
-Package pdftex.def Info: figs/impedance.png  used on input line 83.
+Package pdftex.def Info: figs/impedance.png  used on input line 72.
+(pdftex.def)             Requested size: 252.0pt x 189.00032pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./figs/impedance.png>]
+(./tables/table2.tex)
+<figs/Vin.png, id=44, 722.7pt x 433.62pt>
+File: figs/Vin.png Graphic file (type png)
+<use figs/Vin.png>
+Package pdftex.def Info: figs/Vin.png  used on input line 108.
+(pdftex.def)             Requested size: 252.0pt x 151.20026pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figs/LCvoltage.png, id=45, 578.16pt x 433.62pt>
+File: figs/LCvoltage.png Graphic file (type png)
+<use figs/LCvoltage.png>
+Package pdftex.def Info: figs/LCvoltage.png  used on input line 115.
 (pdftex.def)             Requested size: 252.0pt x 189.00032pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./tables/table2.tex) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[2 <./figs/Vin.png> <./figs/LCvoltage.png>] (./main.aux)
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-]
-[2
-
- <./figs/impedance.png>] (./main.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 33568 strings out of 481239
- 806265 string characters out of 5920377
- 1185649 words of memory out of 5000000
- 48205 multiletter control sequences out of 15000+600000
+ 33581 strings out of 481239
+ 806485 string characters out of 5920377
+ 1179656 words of memory out of 5000000
+ 48216 multiletter control sequences out of 15000+600000
  608879 words of font info for 190 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  76i,15n,91p,472b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc
-/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rt
-xmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
-tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 81667 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
+fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 266297 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
