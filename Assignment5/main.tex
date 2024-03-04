@@ -44,19 +44,28 @@ The steady state output $V_{out}$ of the circuit shown below, will
 
 \noindent Solution: \\
 
-% \begin{figure}[h]
-%     \centering
-%     \input{figs/sol}
-%     \caption{circuit}
-%     \label{fig: 217.EE.16.2}
-% \end{figure}
+\begin{figure}[h]
+    \centering
+    \input{figs/sol}
+    \caption{s-domain circuit}
+    \label{fig: 217.EE.16.2}
+\end{figure}
 
+for an ideal OP amp,
 \begin{align}
-    \frac{V_{-} - 0.1}{R_1} + C_1\frac{d \brak{V_{-} - V_{out}}}{dt} & = 0\\
-    \frac{d \brak{V_{out}}}{dt} & = -\frac{1}{R_1C_1}\\
-    V_{out} & = -\frac{1}{R_1C_1}t\\
-    V_{out} & = max\cbrak{-V_{EE}, -\frac{1}{R_1C_1}t}\\
+    V_+ & = 0V \\
+    V_- & = 0V\label{217.EE.16.1}
+\end{align}
+using KVL,
+\begin{align}
+    0 & = \frac{V_{-} - 0.1}{R_1} + C_1 s\brak{V_{-} - V_{out}}\\
+    V_{out} & = \frac{V_- -0.1}{R_1C_1s} + V_-\\
+    & = -\frac{0.1}{R_1C_1s} & \text{using \eqref{217.EE.16.1}}\\
+    V_{out} & \system{L^-} v_{out}\\
+    v_{out} & = -\frac{0.1}{R_1C_1}t\\
+    v_{out} & = max\cbrak{-v_{EE}, -\frac{1}{R_1C_1}t}
 \end{align}
 
-for $t>V_{EE}R_1C_1$, $V_{out}$ saturates to $-V_{EE}$
+Hence, $v_{out}$ saturates to $-v_{EE}$
 \end{document}
+

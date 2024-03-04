@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.10)  28 FEB 2024 22:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.10)  4 MAR 2024 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1174,28 +1174,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+(./figs/sol.tex
+\realshift=\dimen338
+\realshift=\dimen339
+\realshift=\dimen340
+\realshift=\dimen341
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-
-] (./main.aux) ) 
+]
+(./main.aux) ) 
 Here is how much of TeX's memory you used:
- 33257 strings out of 481239
- 798092 string characters out of 5920377
- 1164128 words of memory out of 5000000
- 47905 multiletter control sequences out of 15000+600000
- 607172 words of font info for 192 fonts, out of 8000000 for 9000
+ 33389 strings out of 481239
+ 801323 string characters out of 5920377
+ 1179148 words of memory out of 5000000
+ 48032 multiletter control sequences out of 15000+600000
+ 608488 words of font info for 194 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 76i,10n,91p,472b,945s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
-r/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/txfonts/txbsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 36824 bytes).
+ 76i,12n,91p,472b,945s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/
+share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/txfonts/txbsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
+fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (1 page, 39050 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
